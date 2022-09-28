@@ -1,0 +1,6 @@
+{
+  "csvpath": "D:\\Mydata\\data-pv-fault-diagnosis\\testdata",
+  "dstpath": "D:\\Mydata\\data-pv-fault-diagnosis\\testdata",
+  "stationid_url": "./configs/pv_station.xlsx",
+  "logpath": "./logs"
+}
