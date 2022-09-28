@@ -1,0 +1,6 @@
+{
+  "csvpath": "D:\\清能院\\六段五段开发\\data",
+  "dstpath": "D:\\清能院\\六段五段开发\\data",
+  "stationid_url": "./configs/pv_station.xlsx",
+  "logpath": "./logs"
+}

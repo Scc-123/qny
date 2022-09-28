@@ -1,0 +1,7 @@
+{
+  "csvpath": "/home/qny/pv_data_process/data",
+  "dstpath": "/data/pv_data_process/power-loss/six_point_five",
+  "stationid_url": "./configs/pv_station.xlsx",
+  "dcpower_url": "./configs/pv_station.xlsx",
+  "logpath": "./logs"
+}

@@ -1,0 +1,768 @@
+parseInstanceConfig finished!
+parseInstanceConfig finished!
+2022-07-01 11:06:42,832 - pv_fault_diagnosis_engine.py[line:19] - INSTANCE:INFO: Initialization complete
+2022-07-01 11:07:58,262 - pv_fault_diagnosis_engine.py[line:23] - INSTANCE:INFO: prepare is done!
+2022-07-01 11:07:58,262 - main.py[line:28] - INSTANCE:INFO: init finished!
+2022-07-15 14:53:49,210 - pv_fault_diagnosis_engine.py[line:26] - INSTANCE:INFO: Initialization complete£°
+2022-07-15 14:53:49,210 - pv_fault_diagnosis_engine.py[line:30] - INSTANCE:INFO: prepare is done!
+2022-07-15 14:53:49,210 - main.py[line:28] - INSTANCE:INFO: init finished!
+2022-07-15 14:53:49,210 - pv_fault_diagnosis_engine.py[line:34] - INSTANCE:INFO: start process
+2022-07-15 14:53:49,211 - pv_fault_diagnosis_engine.py[line:42] - INSTANCE:INFO: dsttime zone:2022-07-14 - 2022-07-15 
+2022-07-15 14:53:49,214 - six_point_five_process.py[line:40] - INSTANCE:ERROR: Traceback (most recent call last):
+  File "D:\MyPyProject\pv-fault-diagnosis\engines\PvFaultDiagnosisEngine\six_point_five_process.py", line 38, in six_five_process
+    df_station = pd.read_excel(stationurl)
+  File "D:\ProgramFiles\miniconda3\envs\pv\lib\site-packages\pandas\util\_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "D:\ProgramFiles\miniconda3\envs\pv\lib\site-packages\pandas\io\excel\_base.py", line 364, in read_excel
+    io = ExcelFile(io, storage_options=storage_options, engine=engine)
+  File "D:\ProgramFiles\miniconda3\envs\pv\lib\site-packages\pandas\io\excel\_base.py", line 1192, in __init__
+    content_or_path=path_or_buffer, storage_options=storage_options
+  File "D:\ProgramFiles\miniconda3\envs\pv\lib\site-packages\pandas\io\excel\_base.py", line 1071, in inspect_excel_format
+    content_or_path, "rb", storage_options=storage_options, is_text=False
+  File "D:\ProgramFiles\miniconda3\envs\pv\lib\site-packages\pandas\io\common.py", line 711, in get_handle
+    handle = open(handle, ioargs.mode)
+FileNotFoundError: [Errno 2] No such file or directory: '.configs/pv_station.xlsx'
+
+2022-07-15 14:53:49,215 - pv_fault_diagnosis_engine.py[line:71] - INSTANCE:ERROR: Traceback (most recent call last):
+  File "D:\MyPyProject\pv-fault-diagnosis\engines\PvFaultDiagnosisEngine\six_point_five_process.py", line 38, in six_five_process
+    df_station = pd.read_excel(stationurl)
+  File "D:\ProgramFiles\miniconda3\envs\pv\lib\site-packages\pandas\util\_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "D:\ProgramFiles\miniconda3\envs\pv\lib\site-packages\pandas\io\excel\_base.py", line 364, in read_excel
+    io = ExcelFile(io, storage_options=storage_options, engine=engine)
+  File "D:\ProgramFiles\miniconda3\envs\pv\lib\site-packages\pandas\io\excel\_base.py", line 1192, in __init__
+    content_or_path=path_or_buffer, storage_options=storage_options
+  File "D:\ProgramFiles\miniconda3\envs\pv\lib\site-packages\pandas\io\excel\_base.py", line 1071, in inspect_excel_format
+    content_or_path, "rb", storage_options=storage_options, is_text=False
+  File "D:\ProgramFiles\miniconda3\envs\pv\lib\site-packages\pandas\io\common.py", line 711, in get_handle
+    handle = open(handle, ioargs.mode)
+FileNotFoundError: [Errno 2] No such file or directory: '.configs/pv_station.xlsx'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-fault-diagnosis\engines\PvFaultDiagnosisEngine\pv_fault_diagnosis_engine.py", line 69, in process
+    six_five_process(oripath, savepath, self.stationurl, stationid, dsttime, nowtime)
+  File "D:\MyPyProject\pv-fault-diagnosis\engines\PvFaultDiagnosisEngine\six_point_five_process.py", line 41, in six_five_process
+    raise Exception("step1: Path fusion error!")
+Exception: step1: Path fusion error!
+
+2022-07-15 14:53:49,216 - main.py[line:40] - INSTANCE:ERROR: process failed
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-fault-diagnosis\engines\PvFaultDiagnosisEngine\six_point_five_process.py", line 38, in six_five_process
+    df_station = pd.read_excel(stationurl)
+  File "D:\ProgramFiles\miniconda3\envs\pv\lib\site-packages\pandas\util\_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "D:\ProgramFiles\miniconda3\envs\pv\lib\site-packages\pandas\io\excel\_base.py", line 364, in read_excel
+    io = ExcelFile(io, storage_options=storage_options, engine=engine)
+  File "D:\ProgramFiles\miniconda3\envs\pv\lib\site-packages\pandas\io\excel\_base.py", line 1192, in __init__
+    content_or_path=path_or_buffer, storage_options=storage_options
+  File "D:\ProgramFiles\miniconda3\envs\pv\lib\site-packages\pandas\io\excel\_base.py", line 1071, in inspect_excel_format
+    content_or_path, "rb", storage_options=storage_options, is_text=False
+  File "D:\ProgramFiles\miniconda3\envs\pv\lib\site-packages\pandas\io\common.py", line 711, in get_handle
+    handle = open(handle, ioargs.mode)
+FileNotFoundError: [Errno 2] No such file or directory: '.configs/pv_station.xlsx'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-fault-diagnosis\engines\PvFaultDiagnosisEngine\pv_fault_diagnosis_engine.py", line 69, in process
+    six_five_process(oripath, savepath, self.stationurl, stationid, dsttime, nowtime)
+  File "D:\MyPyProject\pv-fault-diagnosis\engines\PvFaultDiagnosisEngine\six_point_five_process.py", line 41, in six_five_process
+    raise Exception("step1: Path fusion error!")
+Exception: step1: Path fusion error!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/MyPyProject/pv-fault-diagnosis/main.py", line 34, in main
+    result = engine.process(stationid = str(configs["station_id"]),iscenterlized = int(configs["is_centerlized"]))
+  File "D:\MyPyProject\pv-fault-diagnosis\engines\PvFaultDiagnosisEngine\pv_fault_diagnosis_engine.py", line 72, in process
+    raise Exception("step2: six_five_process error!")
+Exception: step2: six_five_process error!
+
+2022-07-15 14:54:34,537 - pv_fault_diagnosis_engine.py[line:26] - INSTANCE:INFO: Initialization complete£°
+2022-07-15 14:54:34,537 - pv_fault_diagnosis_engine.py[line:30] - INSTANCE:INFO: prepare is done!
+2022-07-15 14:54:34,537 - main.py[line:28] - INSTANCE:INFO: init finished!
+2022-07-15 14:54:34,537 - pv_fault_diagnosis_engine.py[line:34] - INSTANCE:INFO: start process
+2022-07-15 14:54:34,537 - pv_fault_diagnosis_engine.py[line:42] - INSTANCE:INFO: dsttime zone:2022-07-14 - 2022-07-15 
+2022-07-15 14:54:50,584 - six_point_five_process.py[line:122] - INSTANCE:ERROR: Traceback (most recent call last):
+  File "D:\MyPyProject\pv-fault-diagnosis\engines\PvFaultDiagnosisEngine\six_point_five_process.py", line 100, in six_five_process
+    CE.Actual_power(res_current["df"], res_radiance["df"], res_voltage["df"], df_station,stationid)
+  File "D:\MyPyProject\pv-fault-diagnosis\engines\PvFaultDiagnosisEngine\calculate.py", line 133, in Actual_power
+    station_id)
+  File "D:\MyPyProject\pv-fault-diagnosis\engines\PvFaultDiagnosisEngine\calculate.py", line 56, in Theory_Energy
+    energy_theory = radiance_sum / 1000 * capacity[0][0] * 0.9  # ≥°’æ¿Ì¬€∑¢µÁ¡ø
+IndexError: index 0 is out of bounds for axis 0 with size 0
+
+2022-07-15 14:54:50,586 - pv_fault_diagnosis_engine.py[line:71] - INSTANCE:ERROR: Traceback (most recent call last):
+  File "D:\MyPyProject\pv-fault-diagnosis\engines\PvFaultDiagnosisEngine\six_point_five_process.py", line 100, in six_five_process
+    CE.Actual_power(res_current["df"], res_radiance["df"], res_voltage["df"], df_station,stationid)
+  File "D:\MyPyProject\pv-fault-diagnosis\engines\PvFaultDiagnosisEngine\calculate.py", line 133, in Actual_power
+    station_id)
+  File "D:\MyPyProject\pv-fault-diagnosis\engines\PvFaultDiagnosisEngine\calculate.py", line 56, in Theory_Energy
+    energy_theory = radiance_sum / 1000 * capacity[0][0] * 0.9  # ≥°’æ¿Ì¬€∑¢µÁ¡ø
+IndexError: index 0 is out of bounds for axis 0 with size 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-fault-diagnosis\engines\PvFaultDiagnosisEngine\pv_fault_diagnosis_engine.py", line 69, in process
+    six_five_process(oripath, savepath, self.stationurl, stationid, dsttime, nowtime)
+  File "D:\MyPyProject\pv-fault-diagnosis\engines\PvFaultDiagnosisEngine\six_point_five_process.py", line 123, in six_five_process
+    raise Exception("step3: Energy calculate error!")
+Exception: step3: Energy calculate error!
+
+2022-07-15 14:54:50,586 - main.py[line:40] - INSTANCE:ERROR: process failed
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-fault-diagnosis\engines\PvFaultDiagnosisEngine\six_point_five_process.py", line 100, in six_five_process
+    CE.Actual_power(res_current["df"], res_radiance["df"], res_voltage["df"], df_station,stationid)
+  File "D:\MyPyProject\pv-fault-diagnosis\engines\PvFaultDiagnosisEngine\calculate.py", line 133, in Actual_power
+    station_id)
+  File "D:\MyPyProject\pv-fault-diagnosis\engines\PvFaultDiagnosisEngine\calculate.py", line 56, in Theory_Energy
+    energy_theory = radiance_sum / 1000 * capacity[0][0] * 0.9  # ≥°’æ¿Ì¬€∑¢µÁ¡ø
+IndexError: index 0 is out of bounds for axis 0 with size 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-fault-diagnosis\engines\PvFaultDiagnosisEngine\pv_fault_diagnosis_engine.py", line 69, in process
+    six_five_process(oripath, savepath, self.stationurl, stationid, dsttime, nowtime)
+  File "D:\MyPyProject\pv-fault-diagnosis\engines\PvFaultDiagnosisEngine\six_point_five_process.py", line 123, in six_five_process
+    raise Exception("step3: Energy calculate error!")
+Exception: step3: Energy calculate error!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/MyPyProject/pv-fault-diagnosis/main.py", line 34, in main
+    result = engine.process(stationid = str(configs["station_id"]),iscenterlized = int(configs["is_centerlized"]))
+  File "D:\MyPyProject\pv-fault-diagnosis\engines\PvFaultDiagnosisEngine\pv_fault_diagnosis_engine.py", line 72, in process
+    raise Exception("step2: six_five_process error!")
+Exception: step2: six_five_process error!
+
+2022-07-15 14:57:31,218 - pv_fault_diagnosis_engine.py[line:26] - INSTANCE:INFO: Initialization complete£°
+2022-07-15 14:57:31,219 - pv_fault_diagnosis_engine.py[line:30] - INSTANCE:INFO: prepare is done!
+2022-07-15 14:57:31,219 - main.py[line:28] - INSTANCE:INFO: init finished!
+2022-07-15 14:57:31,219 - pv_fault_diagnosis_engine.py[line:34] - INSTANCE:INFO: start process
+2022-07-15 14:57:31,219 - pv_fault_diagnosis_engine.py[line:42] - INSTANCE:INFO: dsttime zone:2022-07-14 - 2022-07-15 
+2022-07-15 14:57:47,286 - main.py[line:36] - INSTANCE:INFO: process finished!
+2022-07-15 16:03:21,164 - pv_fault_diagnosis_engine.py[line:26] - INSTANCE:INFO: Initialization complete£°
+2022-07-15 16:03:21,164 - pv_fault_diagnosis_engine.py[line:30] - INSTANCE:INFO: prepare is done!
+2022-07-15 16:03:21,164 - main.py[line:28] - INSTANCE:INFO: init finished!
+2022-07-15 16:03:21,164 - pv_fault_diagnosis_engine.py[line:34] - INSTANCE:INFO: start process
+2022-07-15 16:03:21,164 - pv_fault_diagnosis_engine.py[line:42] - INSTANCE:INFO: dsttime zone:2022-07-14 - 2022-07-15 
+2022-07-15 16:03:37,387 - main.py[line:36] - INSTANCE:INFO: process finished!
+2022-07-15 16:05:42,558 - pv_fault_diagnosis_engine.py[line:26] - INSTANCE:INFO: Initialization complete£°
+2022-07-15 16:05:42,558 - pv_fault_diagnosis_engine.py[line:30] - INSTANCE:INFO: prepare is done!
+2022-07-15 16:05:42,558 - main.py[line:28] - INSTANCE:INFO: init finished!
+2022-07-15 16:05:42,558 - pv_fault_diagnosis_engine.py[line:34] - INSTANCE:INFO: start process
+2022-07-15 16:05:42,558 - pv_fault_diagnosis_engine.py[line:42] - INSTANCE:INFO: dsttime zone:2022-07-14 - 2022-07-15 
+2022-07-15 16:05:58,903 - main.py[line:36] - INSTANCE:INFO: process finished!
+2022-07-15 16:07:15,248 - pv_fault_diagnosis_engine.py[line:26] - INSTANCE:INFO: Initialization complete£°
+2022-07-15 16:07:15,248 - pv_fault_diagnosis_engine.py[line:30] - INSTANCE:INFO: prepare is done!
+2022-07-15 16:07:15,248 - main.py[line:28] - INSTANCE:INFO: init finished!
+2022-07-15 16:07:15,248 - pv_fault_diagnosis_engine.py[line:34] - INSTANCE:INFO: start process
+2022-07-15 16:07:15,248 - pv_fault_diagnosis_engine.py[line:42] - INSTANCE:INFO: dsttime zone:2022-07-14 - 2022-07-15 
+2022-07-15 16:07:31,413 - main.py[line:36] - INSTANCE:INFO: process finished!
+2022-07-27 13:31:01,360 - pv_six_point_five_engine.py[line:22] - INSTANCE:INFO: Initialization complete£°
+2022-07-27 13:31:01,360 - pv_six_point_five_engine.py[line:26] - INSTANCE:INFO: prepare is done!
+2022-07-27 13:31:01,361 - main.py[line:25] - INSTANCE:INFO: init finished!
+2022-07-27 13:31:01,361 - pv_six_point_five_engine.py[line:30] - INSTANCE:INFO: start process
+2022-07-27 13:31:01,361 - pv_six_point_five_engine.py[line:38] - INSTANCE:INFO: dsttime zone:2022-07-26 - 2022-07-27 
+2022-07-27 13:31:36,096 - six_point_five_process.py[line:139] - INSTANCE:ERROR: Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 136, in six_five_process
+    df_boxfailur_out = CE.Failure_Analysis(path, path1, energy_DC, energy_c, station_id, dsttime)
+NameError: name 'station_id' is not defined
+
+2022-07-27 13:31:36,098 - pv_six_point_five_engine.py[line:67] - INSTANCE:ERROR: Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 136, in six_five_process
+    df_boxfailur_out = CE.Failure_Analysis(path, path1, energy_DC, energy_c, station_id, dsttime)
+NameError: name 'station_id' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\pv_six_point_five_engine.py", line 65, in process
+    six_five_process(oripath, savepath, self.stationurl, stationid, dsttime, nowtime,iscenterlized)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 140, in six_five_process
+    raise Exception("step4:combinerbox diagnosis Analysis error!")
+Exception: step4:combinerbox diagnosis Analysis error!
+
+2022-07-27 13:31:36,099 - main.py[line:37] - INSTANCE:ERROR: process failed
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 136, in six_five_process
+    df_boxfailur_out = CE.Failure_Analysis(path, path1, energy_DC, energy_c, station_id, dsttime)
+NameError: name 'station_id' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\pv_six_point_five_engine.py", line 65, in process
+    six_five_process(oripath, savepath, self.stationurl, stationid, dsttime, nowtime,iscenterlized)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 140, in six_five_process
+    raise Exception("step4:combinerbox diagnosis Analysis error!")
+Exception: step4:combinerbox diagnosis Analysis error!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 31, in main
+    result = engine.process(stationid = str(configs["station_id"]),iscenterlized = int(configs["is_centerlized"]))
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\pv_six_point_five_engine.py", line 68, in process
+    raise Exception("step2: six_five_process error!")
+Exception: step2: six_five_process error!
+
+2022-07-27 13:33:30,380 - pv_six_point_five_engine.py[line:22] - INSTANCE:INFO: Initialization complete£°
+2022-07-27 13:33:30,382 - pv_six_point_five_engine.py[line:26] - INSTANCE:INFO: prepare is done!
+2022-07-27 13:33:30,384 - main.py[line:25] - INSTANCE:INFO: init finished!
+2022-07-27 13:33:30,385 - pv_six_point_five_engine.py[line:30] - INSTANCE:INFO: start process
+2022-07-27 13:33:30,385 - pv_six_point_five_engine.py[line:38] - INSTANCE:INFO: dsttime zone:2022-07-26 - 2022-07-27 
+2022-07-27 13:34:05,699 - main.py[line:33] - INSTANCE:INFO: process finished!
+2022-07-27 13:39:39,507 - pv_six_point_five_engine.py[line:22] - INSTANCE:INFO: Initialization complete£°
+2022-07-27 13:39:39,509 - pv_six_point_five_engine.py[line:26] - INSTANCE:INFO: prepare is done!
+2022-07-27 13:39:39,510 - main.py[line:25] - INSTANCE:INFO: init finished!
+2022-07-27 13:39:39,512 - pv_six_point_five_engine.py[line:30] - INSTANCE:INFO: start process
+2022-07-27 13:39:39,512 - pv_six_point_five_engine.py[line:38] - INSTANCE:INFO: dsttime zone:2022-07-26 - 2022-07-27 
+2022-07-27 13:40:14,773 - main.py[line:33] - INSTANCE:INFO: process finished!
+2022-07-27 13:42:00,858 - pv_six_point_five_engine.py[line:22] - INSTANCE:INFO: Initialization complete£°
+2022-07-27 13:42:00,860 - pv_six_point_five_engine.py[line:26] - INSTANCE:INFO: prepare is done!
+2022-07-27 13:42:00,860 - main.py[line:25] - INSTANCE:INFO: init finished!
+2022-07-27 13:42:00,862 - pv_six_point_five_engine.py[line:30] - INSTANCE:INFO: start process
+2022-07-27 13:42:00,863 - pv_six_point_five_engine.py[line:38] - INSTANCE:INFO: dsttime :2022-07-26
+2022-07-27 13:42:35,594 - main.py[line:33] - INSTANCE:INFO: process finished!
+2022-07-27 14:21:17,449 - pv_six_point_five_engine.py[line:22] - INSTANCE:INFO: Initialization complete£°
+2022-07-27 14:21:17,449 - pv_six_point_five_engine.py[line:26] - INSTANCE:INFO: prepare is done!
+2022-07-27 14:21:17,450 - main.py[line:32] - INSTANCE:INFO: init finished!
+2022-07-27 14:21:17,450 - pv_six_point_five_engine.py[line:30] - INSTANCE:INFO: start process
+2022-07-27 14:21:17,450 - pv_six_point_five_engine.py[line:38] - INSTANCE:INFO: dsttime :2022-07-26
+2022-07-27 14:21:54,488 - six_point_five_process.py[line:127] - INSTANCE:ERROR: Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 105, in six_five_process
+    CE.Actual_power(res_current["df"], res_radiance["df"], res_voltage["df"], df_station,stationid)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\calculate.py", line 94, in Actual_power
+    combiner_box = current.iloc[:, :][current.device_code == GS_XP]  # »°≥ˆª„¡˜œ‰£®GS_XP_13_001_01£©À˘”––≈œ¢
+  File "D:\ProgramFiles\miniconda3\envs\heben\lib\site-packages\pandas\core\ops\common.py", line 69, in new_method
+    return method(self, other)
+  File "D:\ProgramFiles\miniconda3\envs\heben\lib\site-packages\pandas\core\arraylike.py", line 32, in __eq__
+    return self._cmp_method(other, operator.eq)
+  File "D:\ProgramFiles\miniconda3\envs\heben\lib\site-packages\pandas\core\series.py", line 5502, in _cmp_method
+    res_values = ops.comparison_op(lvalues, rvalues, op)
+  File "D:\ProgramFiles\miniconda3\envs\heben\lib\site-packages\pandas\core\ops\array_ops.py", line 284, in comparison_op
+    res_values = comp_method_OBJECT_ARRAY(op, lvalues, rvalues)
+  File "D:\ProgramFiles\miniconda3\envs\heben\lib\site-packages\pandas\core\ops\array_ops.py", line 73, in comp_method_OBJECT_ARRAY
+    result = libops.scalar_compare(x.ravel(), y, op)
+KeyboardInterrupt
+
+2022-07-27 14:21:54,490 - pv_six_point_five_engine.py[line:67] - INSTANCE:ERROR: Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 105, in six_five_process
+    CE.Actual_power(res_current["df"], res_radiance["df"], res_voltage["df"], df_station,stationid)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\calculate.py", line 94, in Actual_power
+    combiner_box = current.iloc[:, :][current.device_code == GS_XP]  # »°≥ˆª„¡˜œ‰£®GS_XP_13_001_01£©À˘”––≈œ¢
+  File "D:\ProgramFiles\miniconda3\envs\heben\lib\site-packages\pandas\core\ops\common.py", line 69, in new_method
+    return method(self, other)
+  File "D:\ProgramFiles\miniconda3\envs\heben\lib\site-packages\pandas\core\arraylike.py", line 32, in __eq__
+    return self._cmp_method(other, operator.eq)
+  File "D:\ProgramFiles\miniconda3\envs\heben\lib\site-packages\pandas\core\series.py", line 5502, in _cmp_method
+    res_values = ops.comparison_op(lvalues, rvalues, op)
+  File "D:\ProgramFiles\miniconda3\envs\heben\lib\site-packages\pandas\core\ops\array_ops.py", line 284, in comparison_op
+    res_values = comp_method_OBJECT_ARRAY(op, lvalues, rvalues)
+  File "D:\ProgramFiles\miniconda3\envs\heben\lib\site-packages\pandas\core\ops\array_ops.py", line 73, in comp_method_OBJECT_ARRAY
+    result = libops.scalar_compare(x.ravel(), y, op)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\pv_six_point_five_engine.py", line 65, in process
+    six_five_process(oripath, savepath, self.stationurl, stationid, dsttime, nowtime,iscenterlized)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 128, in six_five_process
+    raise Exception("step3: Energy calculate error!")
+Exception: step3: Energy calculate error!
+
+2022-07-27 14:21:54,495 - main.py[line:44] - INSTANCE:ERROR: process failed
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 105, in six_five_process
+    CE.Actual_power(res_current["df"], res_radiance["df"], res_voltage["df"], df_station,stationid)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\calculate.py", line 94, in Actual_power
+    combiner_box = current.iloc[:, :][current.device_code == GS_XP]  # »°≥ˆª„¡˜œ‰£®GS_XP_13_001_01£©À˘”––≈œ¢
+  File "D:\ProgramFiles\miniconda3\envs\heben\lib\site-packages\pandas\core\ops\common.py", line 69, in new_method
+    return method(self, other)
+  File "D:\ProgramFiles\miniconda3\envs\heben\lib\site-packages\pandas\core\arraylike.py", line 32, in __eq__
+    return self._cmp_method(other, operator.eq)
+  File "D:\ProgramFiles\miniconda3\envs\heben\lib\site-packages\pandas\core\series.py", line 5502, in _cmp_method
+    res_values = ops.comparison_op(lvalues, rvalues, op)
+  File "D:\ProgramFiles\miniconda3\envs\heben\lib\site-packages\pandas\core\ops\array_ops.py", line 284, in comparison_op
+    res_values = comp_method_OBJECT_ARRAY(op, lvalues, rvalues)
+  File "D:\ProgramFiles\miniconda3\envs\heben\lib\site-packages\pandas\core\ops\array_ops.py", line 73, in comp_method_OBJECT_ARRAY
+    result = libops.scalar_compare(x.ravel(), y, op)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\pv_six_point_five_engine.py", line 65, in process
+    six_five_process(oripath, savepath, self.stationurl, stationid, dsttime, nowtime,iscenterlized)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 128, in six_five_process
+    raise Exception("step3: Energy calculate error!")
+Exception: step3: Energy calculate error!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\main.py", line 38, in main
+    result = engine.process(stationid = str(configs["station_id"]),iscenterlized = int(configs["is_centerlized"]))
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\pv_six_point_five_engine.py", line 68, in process
+    raise Exception("step2: six_five_process error!")
+Exception: step2: six_five_process error!
+
+2022-07-27 14:25:27,425 - pv_six_point_five_engine.py[line:22] - INSTANCE:INFO: Initialization complete£°
+2022-07-27 14:25:27,426 - pv_six_point_five_engine.py[line:26] - INSTANCE:INFO: prepare is done!
+2022-07-27 14:25:27,426 - main.py[line:32] - INSTANCE:INFO: init finished!
+2022-07-27 14:25:27,428 - pv_six_point_five_engine.py[line:30] - INSTANCE:INFO: start process
+2022-07-27 14:25:27,429 - pv_six_point_five_engine.py[line:38] - INSTANCE:INFO: dsttime :2022-07-26
+2022-07-27 14:26:05,704 - six_point_five_process.py[line:127] - INSTANCE:ERROR: Traceback (most recent call last):
+  File "D:\ProgramFiles\miniconda3\envs\heben\lib\site-packages\pandas\core\indexes\base.py", line 3361, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 76, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 108, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5198, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5206, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'QH_GH_ONE'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 105, in six_five_process
+    CE.Actual_power(res_current["df"], res_radiance["df"], res_voltage["df"], df_station,stationid)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\calculate.py", line 133, in Actual_power
+    station_id)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\calculate.py", line 52, in Theory_Energy
+    radiance_sum = radiance['QH_GH_ONE'].apply(self.format).values.sum()  # ∑¯’’∂»◊‹¡ø
+  File "D:\ProgramFiles\miniconda3\envs\heben\lib\site-packages\pandas\core\frame.py", line 3458, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "D:\ProgramFiles\miniconda3\envs\heben\lib\site-packages\pandas\core\indexes\base.py", line 3363, in get_loc
+    raise KeyError(key) from err
+KeyError: 'QH_GH_ONE'
+
+2022-07-27 14:26:05,707 - pv_six_point_five_engine.py[line:67] - INSTANCE:ERROR: Traceback (most recent call last):
+  File "D:\ProgramFiles\miniconda3\envs\heben\lib\site-packages\pandas\core\indexes\base.py", line 3361, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 76, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 108, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5198, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5206, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'QH_GH_ONE'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 105, in six_five_process
+    CE.Actual_power(res_current["df"], res_radiance["df"], res_voltage["df"], df_station,stationid)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\calculate.py", line 133, in Actual_power
+    station_id)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\calculate.py", line 52, in Theory_Energy
+    radiance_sum = radiance['QH_GH_ONE'].apply(self.format).values.sum()  # ∑¯’’∂»◊‹¡ø
+  File "D:\ProgramFiles\miniconda3\envs\heben\lib\site-packages\pandas\core\frame.py", line 3458, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "D:\ProgramFiles\miniconda3\envs\heben\lib\site-packages\pandas\core\indexes\base.py", line 3363, in get_loc
+    raise KeyError(key) from err
+KeyError: 'QH_GH_ONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\pv_six_point_five_engine.py", line 65, in process
+    six_five_process(oripath, savepath, self.stationurl, stationid, dsttime, nowtime,iscenterlized)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 128, in six_five_process
+    raise Exception("step3: Energy calculate error!")
+Exception: step3: Energy calculate error!
+
+2022-07-27 14:26:05,715 - main.py[line:44] - INSTANCE:ERROR: process failed
+Traceback (most recent call last):
+  File "D:\ProgramFiles\miniconda3\envs\heben\lib\site-packages\pandas\core\indexes\base.py", line 3361, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 76, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 108, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5198, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5206, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'QH_GH_ONE'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 105, in six_five_process
+    CE.Actual_power(res_current["df"], res_radiance["df"], res_voltage["df"], df_station,stationid)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\calculate.py", line 133, in Actual_power
+    station_id)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\calculate.py", line 52, in Theory_Energy
+    radiance_sum = radiance['QH_GH_ONE'].apply(self.format).values.sum()  # ∑¯’’∂»◊‹¡ø
+  File "D:\ProgramFiles\miniconda3\envs\heben\lib\site-packages\pandas\core\frame.py", line 3458, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "D:\ProgramFiles\miniconda3\envs\heben\lib\site-packages\pandas\core\indexes\base.py", line 3363, in get_loc
+    raise KeyError(key) from err
+KeyError: 'QH_GH_ONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\pv_six_point_five_engine.py", line 65, in process
+    six_five_process(oripath, savepath, self.stationurl, stationid, dsttime, nowtime,iscenterlized)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 128, in six_five_process
+    raise Exception("step3: Energy calculate error!")
+Exception: step3: Energy calculate error!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\main.py", line 38, in main
+    result = engine.process(stationid = str(configs["station_id"]),iscenterlized = int(configs["is_centerlized"]))
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\pv_six_point_five_engine.py", line 68, in process
+    raise Exception("step2: six_five_process error!")
+Exception: step2: six_five_process error!
+
+2022-07-27 14:28:24,577 - pv_six_point_five_engine.py[line:22] - INSTANCE:INFO: Initialization complete£°
+2022-07-27 14:28:24,577 - pv_six_point_five_engine.py[line:26] - INSTANCE:INFO: prepare is done!
+2022-07-27 14:28:24,578 - main.py[line:32] - INSTANCE:INFO: init finished!
+2022-07-27 14:28:24,579 - pv_six_point_five_engine.py[line:30] - INSTANCE:INFO: start process
+2022-07-27 14:28:24,582 - pv_six_point_five_engine.py[line:38] - INSTANCE:INFO: dsttime :2022-07-26
+2022-07-27 14:29:02,330 - main.py[line:40] - INSTANCE:INFO: process finished!
+2022-08-12 18:07:07,608 - pv_six_point_five_engine.py[line:22] - INSTANCE:INFO: Initialization complete£°
+2022-08-12 18:07:07,609 - pv_six_point_five_engine.py[line:26] - INSTANCE:INFO: prepare is done!
+2022-08-12 18:07:07,609 - main.py[line:33] - INSTANCE:INFO: init finished!
+2022-08-12 18:07:07,610 - main.py[line:45] - INSTANCE:ERROR: process failed
+Traceback (most recent call last):
+  File "main.py", line 39, in main
+    result = engine.process(stationid = str(configs["station_id"]))
+TypeError: process() missing 1 required positional argument: 'iscenterlized'
+
+2022-08-12 18:07:44,141 - pv_six_point_five_engine.py[line:22] - INSTANCE:INFO: Initialization complete£°
+2022-08-12 18:07:44,143 - pv_six_point_five_engine.py[line:26] - INSTANCE:INFO: prepare is done!
+2022-08-12 18:07:44,143 - main.py[line:33] - INSTANCE:INFO: init finished!
+2022-08-12 18:07:44,145 - pv_six_point_five_engine.py[line:30] - INSTANCE:INFO: start process
+2022-08-12 18:07:44,145 - pv_six_point_five_engine.py[line:38] - INSTANCE:INFO: dsttime :2022-08-11
+2022-08-12 18:07:44,147 - pv_six_point_five_engine.py[line:67] - INSTANCE:ERROR: Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\pv_six_point_five_engine.py", line 65, in process
+    six_five_process(oripath, savepath, self.stationurl, stationid, dsttime, nowtime,iscenterlized)
+NameError: name 'iscenterlized' is not defined
+
+2022-08-12 18:07:44,147 - main.py[line:45] - INSTANCE:ERROR: process failed
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\pv_six_point_five_engine.py", line 65, in process
+    six_five_process(oripath, savepath, self.stationurl, stationid, dsttime, nowtime,iscenterlized)
+NameError: name 'iscenterlized' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 39, in main
+    result = engine.process(stationid = str(configs["station_id"]))
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\pv_six_point_five_engine.py", line 68, in process
+    raise Exception("step2: six_five_process error!")
+Exception: step2: six_five_process error!
+
+2022-08-12 18:08:17,074 - pv_six_point_five_engine.py[line:22] - INSTANCE:INFO: Initialization complete£°
+2022-08-12 18:08:17,074 - pv_six_point_five_engine.py[line:26] - INSTANCE:INFO: prepare is done!
+2022-08-12 18:08:17,075 - main.py[line:33] - INSTANCE:INFO: init finished!
+2022-08-12 18:08:17,077 - pv_six_point_five_engine.py[line:30] - INSTANCE:INFO: start process
+2022-08-12 18:08:17,078 - pv_six_point_five_engine.py[line:38] - INSTANCE:INFO: dsttime :2022-08-11
+2022-08-12 18:08:26,175 - main.py[line:41] - INSTANCE:INFO: process finished!
+2022-08-12 18:09:08,433 - pv_six_point_five_engine.py[line:22] - INSTANCE:INFO: Initialization complete£°
+2022-08-12 18:09:08,435 - pv_six_point_five_engine.py[line:26] - INSTANCE:INFO: prepare is done!
+2022-08-12 18:09:08,435 - main.py[line:33] - INSTANCE:INFO: init finished!
+2022-08-12 18:09:08,437 - pv_six_point_five_engine.py[line:30] - INSTANCE:INFO: start process
+2022-08-12 18:09:08,438 - pv_six_point_five_engine.py[line:38] - INSTANCE:INFO: dsttime :2022-08-11
+2022-08-12 18:09:18,259 - six_point_five_process.py[line:152] - INSTANCE:ERROR: Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 149, in six_five_process
+    df_boxfailur_out = CE.Failure_Analysis(path, path1, energy_DC, energy_c, stationid, dsttime)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\calculate.py", line 149, in Failure_Analysis
+    combiner_box = read["list"]
+TypeError: list indices must be integers or slices, not str
+
+2022-08-12 18:09:18,260 - pv_six_point_five_engine.py[line:67] - INSTANCE:ERROR: Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 149, in six_five_process
+    df_boxfailur_out = CE.Failure_Analysis(path, path1, energy_DC, energy_c, stationid, dsttime)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\calculate.py", line 149, in Failure_Analysis
+    combiner_box = read["list"]
+TypeError: list indices must be integers or slices, not str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\pv_six_point_five_engine.py", line 65, in process
+    six_five_process(oripath, savepath, self.stationurl, stationid, dsttime, nowtime)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 153, in six_five_process
+    raise Exception("step4:combinerbox fault Analysis error!")
+Exception: step4:combinerbox fault Analysis error!
+
+2022-08-12 18:09:18,261 - main.py[line:45] - INSTANCE:ERROR: process failed
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 149, in six_five_process
+    df_boxfailur_out = CE.Failure_Analysis(path, path1, energy_DC, energy_c, stationid, dsttime)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\calculate.py", line 149, in Failure_Analysis
+    combiner_box = read["list"]
+TypeError: list indices must be integers or slices, not str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\pv_six_point_five_engine.py", line 65, in process
+    six_five_process(oripath, savepath, self.stationurl, stationid, dsttime, nowtime)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 153, in six_five_process
+    raise Exception("step4:combinerbox fault Analysis error!")
+Exception: step4:combinerbox fault Analysis error!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 39, in main
+    result = engine.process(stationid = str(configs["station_id"]))
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\pv_six_point_five_engine.py", line 68, in process
+    raise Exception("step2: six_five_process error!")
+Exception: step2: six_five_process error!
+
+2022-08-12 18:22:39,738 - pv_six_point_five_engine.py[line:22] - INSTANCE:INFO: Initialization complete£°
+2022-08-12 18:22:39,738 - pv_six_point_five_engine.py[line:26] - INSTANCE:INFO: prepare is done!
+2022-08-12 18:22:39,739 - main.py[line:33] - INSTANCE:INFO: init finished!
+2022-08-12 18:22:39,741 - pv_six_point_five_engine.py[line:30] - INSTANCE:INFO: start process
+2022-08-12 18:22:39,741 - pv_six_point_five_engine.py[line:38] - INSTANCE:INFO: dsttime :2022-08-11
+2022-08-12 18:22:39,744 - pv_six_point_five_engine.py[line:48] - INSTANCE:INFO: result:{'code': 2000, 'des': ''}
+2022-08-12 18:22:39,746 - pv_six_point_five_engine.py[line:49] - INSTANCE:ERROR: /home/qny/pv_data_process/power-loss/data\20220811\609 is not exists !!
+2022-08-12 18:22:39,748 - main.py[line:43] - INSTANCE:ERROR: process failed!! code:2000
+2022-08-12 18:23:26,549 - pv_six_point_five_engine.py[line:22] - INSTANCE:INFO: Initialization complete£°
+2022-08-12 18:23:26,549 - pv_six_point_five_engine.py[line:26] - INSTANCE:INFO: prepare is done!
+2022-08-12 18:23:26,550 - main.py[line:33] - INSTANCE:INFO: init finished!
+2022-08-12 18:23:26,551 - pv_six_point_five_engine.py[line:30] - INSTANCE:INFO: start process
+2022-08-12 18:23:26,555 - pv_six_point_five_engine.py[line:38] - INSTANCE:INFO: dsttime :2022-08-11
+2022-08-12 18:23:36,825 - six_point_five_process.py[line:152] - INSTANCE:ERROR: Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 149, in six_five_process
+    df_boxfailur_out = CE.Failure_Analysis(path, path1, energy_DC, energy_c, stationid, dsttime)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\calculate.py", line 162, in Failure_Analysis
+    Inverter = read["list"]
+TypeError: list indices must be integers or slices, not str
+
+2022-08-12 18:23:36,825 - pv_six_point_five_engine.py[line:67] - INSTANCE:ERROR: Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 149, in six_five_process
+    df_boxfailur_out = CE.Failure_Analysis(path, path1, energy_DC, energy_c, stationid, dsttime)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\calculate.py", line 162, in Failure_Analysis
+    Inverter = read["list"]
+TypeError: list indices must be integers or slices, not str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\pv_six_point_five_engine.py", line 65, in process
+    six_five_process(oripath, savepath, self.stationurl, stationid, dsttime, nowtime)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 153, in six_five_process
+    raise Exception("step4:combinerbox fault Analysis error!")
+Exception: step4:combinerbox fault Analysis error!
+
+2022-08-12 18:23:36,827 - main.py[line:45] - INSTANCE:ERROR: process failed
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 149, in six_five_process
+    df_boxfailur_out = CE.Failure_Analysis(path, path1, energy_DC, energy_c, stationid, dsttime)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\calculate.py", line 162, in Failure_Analysis
+    Inverter = read["list"]
+TypeError: list indices must be integers or slices, not str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\pv_six_point_five_engine.py", line 65, in process
+    six_five_process(oripath, savepath, self.stationurl, stationid, dsttime, nowtime)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 153, in six_five_process
+    raise Exception("step4:combinerbox fault Analysis error!")
+Exception: step4:combinerbox fault Analysis error!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 39, in main
+    result = engine.process(stationid = str(configs["station_id"]))
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\pv_six_point_five_engine.py", line 68, in process
+    raise Exception("step2: six_five_process error!")
+Exception: step2: six_five_process error!
+
+2022-08-12 18:23:59,661 - pv_six_point_five_engine.py[line:22] - INSTANCE:INFO: Initialization complete£°
+2022-08-12 18:23:59,661 - pv_six_point_five_engine.py[line:26] - INSTANCE:INFO: prepare is done!
+2022-08-12 18:23:59,665 - main.py[line:33] - INSTANCE:INFO: init finished!
+2022-08-12 18:23:59,667 - pv_six_point_five_engine.py[line:30] - INSTANCE:INFO: start process
+2022-08-12 18:23:59,670 - pv_six_point_five_engine.py[line:38] - INSTANCE:INFO: dsttime :2022-08-11
+2022-08-12 18:24:09,374 - six_point_five_process.py[line:152] - INSTANCE:ERROR: Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 149, in six_five_process
+    df_boxfailur_out = CE.Failure_Analysis(path, path1, energy_DC, energy_c, stationid, dsttime)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\calculate.py", line 186, in Failure_Analysis
+    Inverter_sum[Inverter_dict[key_id]] = round(sums, 2)
+KeyError: None
+
+2022-08-12 18:24:09,374 - pv_six_point_five_engine.py[line:67] - INSTANCE:ERROR: Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 149, in six_five_process
+    df_boxfailur_out = CE.Failure_Analysis(path, path1, energy_DC, energy_c, stationid, dsttime)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\calculate.py", line 186, in Failure_Analysis
+    Inverter_sum[Inverter_dict[key_id]] = round(sums, 2)
+KeyError: None
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\pv_six_point_five_engine.py", line 65, in process
+    six_five_process(oripath, savepath, self.stationurl, stationid, dsttime, nowtime)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 153, in six_five_process
+    raise Exception("step4:combinerbox fault Analysis error!")
+Exception: step4:combinerbox fault Analysis error!
+
+2022-08-12 18:24:09,377 - main.py[line:45] - INSTANCE:ERROR: process failed
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 149, in six_five_process
+    df_boxfailur_out = CE.Failure_Analysis(path, path1, energy_DC, energy_c, stationid, dsttime)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\calculate.py", line 186, in Failure_Analysis
+    Inverter_sum[Inverter_dict[key_id]] = round(sums, 2)
+KeyError: None
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\pv_six_point_five_engine.py", line 65, in process
+    six_five_process(oripath, savepath, self.stationurl, stationid, dsttime, nowtime)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 153, in six_five_process
+    raise Exception("step4:combinerbox fault Analysis error!")
+Exception: step4:combinerbox fault Analysis error!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 39, in main
+    result = engine.process(stationid = str(configs["station_id"]))
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\pv_six_point_five_engine.py", line 68, in process
+    raise Exception("step2: six_five_process error!")
+Exception: step2: six_five_process error!
+
+2022-08-12 18:25:56,334 - pv_six_point_five_engine.py[line:22] - INSTANCE:INFO: Initialization complete£°
+2022-08-12 18:25:56,334 - pv_six_point_five_engine.py[line:26] - INSTANCE:INFO: prepare is done!
+2022-08-12 18:25:56,335 - main.py[line:33] - INSTANCE:INFO: init finished!
+2022-08-12 18:25:56,337 - pv_six_point_five_engine.py[line:30] - INSTANCE:INFO: start process
+2022-08-12 18:25:56,338 - pv_six_point_five_engine.py[line:38] - INSTANCE:INFO: dsttime :2022-08-11
+2022-08-12 18:26:06,696 - six_point_five_process.py[line:152] - INSTANCE:ERROR: Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 149, in six_five_process
+    df_boxfailur_out = CE.Failure_Analysis(path, path1, energy_DC, energy_c, stationid, dsttime)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\calculate.py", line 186, in Failure_Analysis
+    Inverter_sum[Inverter_dict[key_id]] = round(sums, 2)
+KeyError: None
+
+2022-08-12 18:26:06,697 - pv_six_point_five_engine.py[line:67] - INSTANCE:ERROR: Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 149, in six_five_process
+    df_boxfailur_out = CE.Failure_Analysis(path, path1, energy_DC, energy_c, stationid, dsttime)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\calculate.py", line 186, in Failure_Analysis
+    Inverter_sum[Inverter_dict[key_id]] = round(sums, 2)
+KeyError: None
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\pv_six_point_five_engine.py", line 65, in process
+    six_five_process(oripath, savepath, self.stationurl, stationid, dsttime, nowtime)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 153, in six_five_process
+    raise Exception("step4:combinerbox fault Analysis error!")
+Exception: step4:combinerbox fault Analysis error!
+
+2022-08-12 18:26:06,701 - main.py[line:45] - INSTANCE:ERROR: process failed
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 149, in six_five_process
+    df_boxfailur_out = CE.Failure_Analysis(path, path1, energy_DC, energy_c, stationid, dsttime)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\calculate.py", line 186, in Failure_Analysis
+    Inverter_sum[Inverter_dict[key_id]] = round(sums, 2)
+KeyError: None
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\pv_six_point_five_engine.py", line 65, in process
+    six_five_process(oripath, savepath, self.stationurl, stationid, dsttime, nowtime)
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\six_point_five_process.py", line 153, in six_five_process
+    raise Exception("step4:combinerbox fault Analysis error!")
+Exception: step4:combinerbox fault Analysis error!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 39, in main
+    result = engine.process(stationid = str(configs["station_id"]))
+  File "D:\MyPyProject\pv-six-point-five\engines\PvSixPointFiveEngine\pv_six_point_five_engine.py", line 68, in process
+    raise Exception("step2: six_five_process error!")
+Exception: step2: six_five_process error!
+
+2022-08-25 13:48:32,719 - pv_six_point_five_engine.py[line:22] - INSTANCE:INFO: Initialization completeÔºÅ
+2022-08-25 13:48:32,719 - pv_six_point_five_engine.py[line:26] - INSTANCE:INFO: prepare is done!
+2022-08-25 13:48:32,719 - main.py[line:33] - INSTANCE:INFO: init finished!
+2022-08-25 13:48:32,719 - pv_six_point_five_engine.py[line:30] - INSTANCE:INFO: start process
+2022-08-25 13:48:32,720 - pv_six_point_five_engine.py[line:42] - INSTANCE:INFO: dsttime :2022-08-24
+2022-08-25 13:48:32,720 - pv_six_point_five_engine.py[line:52] - INSTANCE:INFO: result:{'code': 2000, 'des': ''}
+2022-08-25 13:48:32,720 - pv_six_point_five_engine.py[line:53] - INSTANCE:ERROR: D:\Mydata\data-pv-fault-diagnosis\testdata/20220825/491 is not exists !!
+2022-08-25 13:48:32,720 - main.py[line:43] - INSTANCE:ERROR: process failed!! code:2000
+2022-08-25 13:48:33,379 - pv_six_point_five_engine.py[line:22] - INSTANCE:INFO: Initialization completeÔºÅ
+2022-08-25 13:48:33,379 - pv_six_point_five_engine.py[line:26] - INSTANCE:INFO: prepare is done!
+2022-08-25 13:48:33,380 - main.py[line:33] - INSTANCE:INFO: init finished!
+2022-08-25 13:48:33,380 - pv_six_point_five_engine.py[line:30] - INSTANCE:INFO: start process
+2022-08-25 13:48:33,380 - pv_six_point_five_engine.py[line:42] - INSTANCE:INFO: dsttime :2022-08-24
+2022-08-25 13:48:33,380 - pv_six_point_five_engine.py[line:52] - INSTANCE:INFO: result:{'code': 2000, 'des': ''}
+2022-08-25 13:48:33,380 - pv_six_point_five_engine.py[line:53] - INSTANCE:ERROR: D:\Mydata\data-pv-fault-diagnosis\testdata/20220825/494 is not exists !!
+2022-08-25 13:48:33,380 - main.py[line:43] - INSTANCE:ERROR: process failed!! code:2000
+2022-08-25 13:49:18,569 - pv_six_point_five_engine.py[line:22] - INSTANCE:INFO: Initialization completeÔºÅ
+2022-08-25 13:49:18,570 - pv_six_point_five_engine.py[line:26] - INSTANCE:INFO: prepare is done!
+2022-08-25 13:49:18,570 - main.py[line:33] - INSTANCE:INFO: init finished!
+2022-08-25 13:49:18,570 - pv_six_point_five_engine.py[line:30] - INSTANCE:INFO: start process
+2022-08-25 13:49:18,570 - pv_six_point_five_engine.py[line:42] - INSTANCE:INFO: dsttime :2022-08-24
+2022-08-25 13:49:44,955 - main.py[line:41] - INSTANCE:INFO: process finished!
+2022-08-25 13:49:45,612 - pv_six_point_five_engine.py[line:22] - INSTANCE:INFO: Initialization completeÔºÅ
+2022-08-25 13:49:45,613 - pv_six_point_five_engine.py[line:26] - INSTANCE:INFO: prepare is done!
+2022-08-25 13:49:45,613 - main.py[line:33] - INSTANCE:INFO: init finished!
+2022-08-25 13:49:45,613 - pv_six_point_five_engine.py[line:30] - INSTANCE:INFO: start process
+2022-08-25 13:49:45,613 - pv_six_point_five_engine.py[line:42] - INSTANCE:INFO: dsttime :2022-08-24
+2022-08-25 13:49:45,614 - six_point_five_process.py[line:64] - INSTANCE:ERROR: Traceback (most recent call last):
+  File "/home/qny/pv_data_process/pv-six-point-five-energy/engines/PvSixPointFiveEngine/six_point_five_process.py", line 33, in six_five_process
+    currenturl = currenturls[0]
+IndexError: list index out of range
+
+2022-08-25 13:49:45,615 - pv_six_point_five_engine.py[line:71] - INSTANCE:ERROR: Traceback (most recent call last):
+  File "/home/qny/pv_data_process/pv-six-point-five-energy/engines/PvSixPointFiveEngine/six_point_five_process.py", line 33, in six_five_process
+    currenturl = currenturls[0]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/qny/pv_data_process/pv-six-point-five-energy/engines/PvSixPointFiveEngine/pv_six_point_five_engine.py", line 69, in process
+    six_five_process(oripath, savepath, self.stationurl, stationid, dsttime, nowtime)
+  File "/home/qny/pv_data_process/pv-six-point-five-energy/engines/PvSixPointFiveEngine/six_point_five_process.py", line 65, in six_five_process
+    raise Exception("step1: Path fusion error!")
+Exception: step1: Path fusion error!
+
+2022-08-25 13:49:45,615 - main.py[line:45] - INSTANCE:ERROR: process failed
+Traceback (most recent call last):
+  File "/home/qny/pv_data_process/pv-six-point-five-energy/engines/PvSixPointFiveEngine/six_point_five_process.py", line 33, in six_five_process
+    currenturl = currenturls[0]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/qny/pv_data_process/pv-six-point-five-energy/engines/PvSixPointFiveEngine/pv_six_point_five_engine.py", line 69, in process
+    six_five_process(oripath, savepath, self.stationurl, stationid, dsttime, nowtime)
+  File "/home/qny/pv_data_process/pv-six-point-five-energy/engines/PvSixPointFiveEngine/six_point_five_process.py", line 65, in six_five_process
+    raise Exception("step1: Path fusion error!")
+Exception: step1: Path fusion error!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/qny/pv_data_process/pv-six-point-five-energy/main.py", line 39, in main
+    result = engine.process(stationid = str(configs["station_id"]))
+  File "/home/qny/pv_data_process/pv-six-point-five-energy/engines/PvSixPointFiveEngine/pv_six_point_five_engine.py", line 72, in process
+    raise Exception("step2: six_five_process error!")
+Exception: step2: six_five_process error!
+
+2022-08-25 13:55:07,230 - pv_six_point_five_engine.py[line:22] - INSTANCE:INFO: Initialization completeÔºÅ
+2022-08-25 13:55:07,230 - pv_six_point_five_engine.py[line:26] - INSTANCE:INFO: prepare is done!
+2022-08-25 13:55:07,230 - main.py[line:33] - INSTANCE:INFO: init finished!
+2022-08-25 13:55:07,230 - pv_six_point_five_engine.py[line:30] - INSTANCE:INFO: start process
+2022-08-25 13:55:07,230 - pv_six_point_five_engine.py[line:42] - INSTANCE:INFO: dsttime :2022-08-24
+2022-08-25 13:55:32,801 - main.py[line:41] - INSTANCE:INFO: process finished!
